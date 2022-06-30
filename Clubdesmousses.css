@@ -1,0 +1,309 @@
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: auto;
+}
+
+/* caroussel fond d'écran */
+#caroussel
+{
+    background-image: url(images/photo_noir&blanc.JPG); /* mettre photo drone puis après vidéo de bienvenu à monter */ 
+    background-size: cover;
+    overflow-x: hidden; /*faire montage video avec davinci*/
+    overflow-y: hidden;
+}
+
+/* barre de navigation */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    margin-right: -50px;
+}
+
+header img 
+{
+    margin: 10px;
+}
+
+nav
+{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar
+{
+    position: relative;
+}
+
+nav li 
+{
+    list-style-type: none;
+}
+
+nav a 
+{
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 80px;
+    color: white;
+}
+
+nav a:hover
+{
+    color: #08beef;
+    border-bottom: 1px solid #08beef;
+}
+
+#sub-menu1
+{
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 810px;
+    text-align: center;
+}
+
+nav li:hover #sub-menu1
+{
+    display: block;
+}
+
+.border_bottom
+{
+    border-bottom: 1px solid black;
+    height: 580px;
+}
+
+/* footer page d'acceuil */
+footer 
+{
+    background-color: black;
+    padding-bottom: 60px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer h1
+{
+    color: white;
+}
+
+footer p
+{
+    color: white;
+}
+
+footer td
+{
+    color: white;
+    padding-right: 30px;
+}
+
+.localisation
+{
+    margin-top: -10px;
+    border-radius: 10px;
+}
+
+#space
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.office_NO
+{
+    border-radius: 10px; /* rogner l'images avec la tablette de celeste */
+    margin-right: 20px;
+    padding-bottom: 35px;
+}
+
+.insta
+{
+    border-radius: 10px; /* rogner l'images avec la tablette de celeste */
+    margin-right: 20px;
+    padding-bottom: 35px;
+}
+
+.fb
+{
+    border-radius: 5px;
+    margin-right: 20px;
+    padding-bottom: 35px;
+}
+
+/* Responsive */ /* Changer la photo (profil) */
+@media screen and (max-width: 729px) /* pour telephone */
+{
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    td {
+        display: flex;
+        justify-content: center;
+    }
+    table {
+        display: flex;
+        justify-content: center;
+    }
+    #caroussel{
+        background-image: url(images/saut_natation.JPG); /* mettre photo drone puis après vidéo de bienvenu à monter */ 
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media screen and (min-width: 730px) and (max-width: 1000px) /* pour tablette */
+{
+    footer {
+        flex-wrap: wrap;
+    }
+    #contact, #horaires, #emplacement, #reseaux_sociaux {
+    padding: 20px;
+}
+}
+
+/* nav burger */
+@media screen and (min-width: 1001px)
+{
+    .navigation {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    header {
+        opacity: 0;
+    }
+
+    .navigationCheckbox {
+        display: none;
+    }
+    
+    .navigationBg {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 1.5rem;
+        left: 1.5rem;
+        background-color: #08beef;
+        z-index: 1000;
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    
+    
+    .navigationBtn {
+        background-color: #fff;
+        height: 4.5rem;
+        width: 4.5rem;
+        position: fixed;
+        top: 0.35rem;
+        left: 0.35rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    
+    .navigationIcon {
+        position: relative;
+        margin-top: 2.3rem;
+        width: 3rem;
+        height: 2px;
+        background-color: #333;
+        display: inline-block;
+    }
+    
+    .navigationIcon::before,
+    .navigationIcon::after {
+        width: 3rem;
+        height: 2px;
+        background-color: #333;
+        display: inline-block;
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+    
+    .navigationIcon::before {
+        top: -.8rem;
+    }
+    
+    .navigationIcon::after {
+        top: .8rem;
+    }
+    
+    
+    .nav1 {
+        height: 70px;
+        position: fixed;
+        width: 0;
+        opacity: 0;
+        z-index: 1500;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    
+    .navigationListe {
+        position: absolute;
+        top: -700px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        list-style-type: none;
+        width: 100%;
+    }
+    
+    
+    .liens {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 3rem;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    
+    
+    .navigationCheckbox:checked ~ .navigationBg {
+        transform: scale(80);
+    }
+    
+    
+    .navigationCheckbox:checked ~ .nav1 {
+        opacity: 1;
+        width: 100%;
+    }
+    
+    
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon {
+        background-color: transparent;
+    }
+    
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}
