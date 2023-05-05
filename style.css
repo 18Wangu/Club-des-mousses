@@ -1,0 +1,151 @@
+/******************Toute la page******************/
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    text-align: center;
+}
+.page_club{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 36px;
+    color: #EE7601;
+    font-family: "Yanone";
+}
+h2{
+    font-size: 32px;
+    color: #1AC1F3;
+    font-family: "Yanone";
+}
+
+/******************les fonts******************/
+@font-face {
+    font-family: "Yanone";
+    src: url("fonts/static/YanoneKaffeesatz-Regular.ttf");
+}
+  
+
+/******************navbar******************/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 60px;
+}
+.size_logo{
+    width: 110px;
+}
+nav ul{
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+}
+.navbar a{
+    margin: 0px 40px;
+    color: #312783;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: "Yanone";
+}
+nav a:hover{
+    color: #EE7601;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+.contact_bouton{
+    color: #fff;
+    font-size: 28px;
+    border: 1px solid #312783;
+    background-color: #312783;
+    border-radius: 25px;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+.contact_bouton:hover{
+    background-color: #EE7601;
+    border: 1px solid #EE7601;
+    color: #fff;
+}
+
+/******************video club******************/
+.video_club{
+    margin-top: 50px;
+    width: 800px;
+    border-radius: 15px;
+}
+
+/******************groupe d'age******************/
+.groupe_age{
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.les_images_ages{
+    display: flex;
+    flex-direction: row;
+}
+.image_et_legende{
+    text-align: center;
+}
+.image_groupe_age{
+    width: 200px;
+    margin: 35px 30px 10px 30px;
+    border-radius: 15px;
+}
+figcaption{
+    font-size: 28px;
+    color: #312783;
+    font-family: "Yanone";
+}
+
+/******************divider******************/
+.divider{
+    margin: 150px 0px;
+}
+
+/******************activites******************/
+.activites{
+    margin: 0px 160px;
+}
+.activites h1{
+    margin: 20px;
+}
+.activites h2{
+    margin: 50px;
+}
+.activites p{
+    margin-bottom: 100px;
+    font-size: 25px;
+    color: #312783;
+}
+
+/******************tarifs******************/
+.box_tarif{
+    background-color: #1AC1F3;
+    border-radius: 25px;
+    width: 600px;
+    height: 250px;
+    margin: 50px;
+}
+
+
+
+
+/*les couleurs*/
+p{
+    color: #1AC1F3;
+    color: #312783;
+    color: #EE7601;
+}
+
